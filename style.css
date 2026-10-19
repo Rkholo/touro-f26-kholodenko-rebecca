@@ -132,7 +132,8 @@ button {
 .page {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+/* Reduced the gap between header and hero for a tighter layout */
+gap: 0.5rem;
 }
 
 /* Header spans all 12 columns to give the logo and navigation room */
