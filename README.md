@@ -73,3 +73,17 @@ A cold start takes **1–3 minutes**. Here's why:
 * **Your work is saved automatically.** Even if the Codespace stops, the files are stored on GitHub. You won't lose anything.  
 * **You get a fixed number of free hours per month** through the GitHub Student Developer Pack. A cold start uses some of those hours just booting up, so it's worth keeping one Codespace alive while you're actively working.  
 * **If you need to work offline,** you can always install VS Code and Git locally instead but it does take some set up — Codespaces is a convenience, not a requirement.
+
+## Step 2 — Section Table
+
+| Section | What it is | Full width, or beside something? |
+|---|---|---|
+| 1 | Header + navigation | Full width; logo beside navigation |
+| 2 | Hero illustration + Start for Free button | Full width; button below illustration |
+
+## Step 4 — Grid Placement
+
+| Section | Start line | End line | CSS |
+|---|---|---|---|
+| Header | 1 | 13 | `grid-column: 1 / 13;` |
+| Main hero area | 1 | 13 | `grid-column: 1 / 13;` |
