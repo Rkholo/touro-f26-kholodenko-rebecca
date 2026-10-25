@@ -106,7 +106,25 @@ button {
   cursor: pointer;
 }
 
+/* PAGE GRID */
+.page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+/* Reduced the gap between header and hero for a tighter layout */
+gap: 0.5rem;
+}
+
+/* Header spans all 12 columns to give the logo and navigation room */
+.page > header {
+  grid-column: 1 / 13;
+}
+/* Main area spans all 12 columns to keep the hero and button centered */
+.page > main {
+  grid-column: 1 / 13;
+}
+
 @media (max-width: 600px) {
+  /* Stack the header and shorten the hero for smaller screens. */
   header {
     flex-direction: column;
     padding: 20px;
@@ -128,19 +146,4 @@ button {
   .right {
     bottom: 130px;
   }
-}/* PAGE GRID */
-.page {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-/* Reduced the gap between header and hero for a tighter layout */
-gap: 0.5rem;
-}
-
-/* Header spans all 12 columns to give the logo and navigation room */
-.page > header {
-  grid-column: 1 / 13;
-}
-/* Main area spans all 12 columns to keep the hero and button centered */
-.page > main {
-  grid-column: 1 / 13;
 }
