@@ -76,15 +76,6 @@ main {
   background: #eee;
 }
 
-.phone {
-  position: relative;
-  width: 45%;
-  aspect-ratio: 295 / 480;
-  border: 2px solid black;
-  background: #d9d9d9;
-  transform: rotate(14deg);
-}
-
 .notification {
   position: absolute;
   width: 35%;
@@ -370,4 +361,15 @@ footer {
   .right {
     bottom: 130px;
   }
+}
+.phone {
+  position: relative;
+  display: block;
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  border: none;
+  background: transparent;
+  transform: none;
 }
