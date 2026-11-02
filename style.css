@@ -7,14 +7,16 @@
   box-sizing: border-box;
 }
 
+/* Images fit their container and keep their proportions. */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* START BELOW */
+/* READABLE BASE STYLES */
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 header {
@@ -27,12 +29,7 @@ header {
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  padding: 1rem;
   background: #eee;
   text-align: center;
 }
@@ -43,93 +40,104 @@ nav {
   gap: 24px;
 }
 
-nav a {
-  color: #666;
-  text-decoration: none;
+a {
+  color: #333;
 }
 
 main {
-  padding: 40px 20px 60px;
-  background: #b2b2b2;
-  text-align: center;
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 650px;
-  height: 600px;
-  margin: auto;
-}
-
-.circle {
-  position: absolute;
-  width: 90%;
-  aspect-ratio: 1;
-  border-radius: 50%;
+  padding: 2rem 1rem;
   background: #eee;
 }
 
-.phone {
-  position: relative;
-  width: 45%;
-  height: 80%;
-  border: 2px solid black;
-  background: #d9d9d9;
-  transform: rotate(14deg);
+section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ccc;
 }
 
-.notification {
-  position: absolute;
-  width: 35%;
-  height: 45px;
-  border-radius: 30px;
-  background: #808080;
+.hero {
+  max-width: 650px;
+  margin: auto;
 }
 
-.left {
-  left: 0;
-  top: 200px;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.right {
-  right: 0;
-  bottom: 180px;
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  max-width: 65ch;
+  margin-bottom: 1rem;
+}
+
+.hero img {
+  display: block;
+  margin: 1rem 0;
+}
+
+article {
+  margin-bottom: 1.5rem;
+}
+
+form {
+  max-width: 30rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 0.75rem;
+}
+
+input {
+  max-width: 100%;
 }
 
 button {
-  margin-top: 30px;
-  padding: 20px 50px;
-  border: none;
-  border-radius: 50px;
-  background: #666;
-  color: white;
-  font-family: inherit;
-  font-size: 28px;
+  margin-top: 1rem;
+  border: 1px solid #666;
+  background: #ddd;
+  color: #222;
   cursor: pointer;
+}
+
+footer {
+  padding: 1rem;
 }
 
 /* PAGE GRID */
 .page {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-/* Reduced the gap between header and hero for a tighter layout */
-gap: 0.5rem;
+
+  /* Reduced the gap between header and main content. */
+  gap: 0.5rem;
 }
 
-/* Header spans all 12 columns to give the logo and navigation room */
-.page > header {
-  grid-column: 1 / 13;
-}
-/* Main area spans all 12 columns to keep the hero and button centered */
-.page > main {
+/* Each main page element spans all 12 columns. */
+.page > header,
+.page > main,
+.page > footer {
   grid-column: 1 / 13;
 }
 
+/* MOBILE LAYOUT */
 @media (max-width: 600px) {
-  /* Stack the header and shorten the hero for smaller screens. */
+  /* Stack the logo and navigation on smaller screens. */
   header {
     flex-direction: column;
     padding: 20px;
@@ -139,17 +147,4 @@ gap: 0.5rem;
     justify-content: center;
     gap: 16px;
   }
-
-  .hero {
-    height: 450px;
-  }
-
-  .left {
-    top: 140px;
-  }
-
-  .right {
-    bottom: 130px;
-  }
 }
-

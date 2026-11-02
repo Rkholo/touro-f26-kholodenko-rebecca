@@ -36,3 +36,47 @@ As a busy parent, I want to send reminders to my family so they remember events 
 | Sign Up | Input label | Email address | Step 4: enter signup information |
 | Sign Up | Button | Create My Account | Step 4: complete the signup interface |
 | Footer | Paragraph | © 2026 Calendar Hub | none: project identification |
+
+
+
+## Second page: Calendar dashboard
+
+### Dashboard user flow
+
+1. View upcoming family events.
+2. Find an event or check a family member’s schedule.
+3. Add an event or invite a family member.
+4. Set a reminder for the people involved.
+
+### Dashboard content inventory
+
+| Section | Element | Real content | Serves which step? |
+| --- | --- | --- | --- |
+| Header | h1 | Your Family Calendar | Step 1: identify the calendar |
+| Header | Link | Back to Home | Step 1: return to the landing page |
+| Search | Label + search input | Search family events | Step 2: find an event |
+| Search | Button | Search | Step 2: search the calendar |
+| Sidebar | Link | Add Event | Step 3: find the event form |
+| Sidebar | Link | Add Member | Step 3: find the invitation form |
+| Sidebar | Link | View Members’ Schedules | Step 2: find family availability |
+| Categories | h2 | Categories | Step 1: understand event groups |
+| Categories | List | Personal, Family, Work, School | Step 1: identify event categories |
+| Calendar | h2 | November 2026 | Step 1: identify the displayed month |
+| Calendar | Weekday headings | Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday | Step 1: locate event dates |
+| Calendar | Date cells | November 1–30 | Step 1: locate events within the month |
+| Calendar | Event text | Family Dinner — November 8, 6:00 PM | Step 1: see an upcoming family event |
+| Calendar | Event text | Soccer Practice — November 10, 4:00 PM | Step 1: see an upcoming activity |
+| Members | h2 | Family Availability | Step 2: check members’ schedules |
+| Members | Paragraph | Elena: Available Sunday after 5 PM. Jordan: Available Sunday after 6 PM. | Step 2: compare availability |
+| Add Event | h2 | Add a Family Event | Step 3: introduce the event form |
+| Add Event | Label + input | Event name | Step 3: name the event |
+| Add Event | Label + date input | Event date | Step 3: choose the date |
+| Add Event | Label + time input | Event time | Step 3: choose the time |
+| Add Event | Label + input | Location | Step 3: share where to meet |
+| Add Event | Group label + checkboxes | Invite family members: Elena, Jordan | Step 3: select people involved |
+| Add Event | Label + select | Reminder: At event time, 1 hour before, 1 day before | Step 4: choose reminder timing |
+| Add Event | Button | Save Event | Step 3: finish the event interface |
+| Add Member | h2 | Invite a Family Member | Step 3: introduce the invitation form |
+| Add Member | Label + email input | Family member’s email address | Step 3: enter invitation details |
+| Add Member | Button | Send Invitation | Step 3: finish the invitation interface |
+| Footer | Paragraph | © 2026 Calendar Hub | none: project identification |
