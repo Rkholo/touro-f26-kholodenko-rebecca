@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* START BELOW */
 body {
   font-family: Arial, sans-serif;
@@ -147,3 +152,4 @@ gap: 0.5rem;
     bottom: 130px;
   }
 }
+
