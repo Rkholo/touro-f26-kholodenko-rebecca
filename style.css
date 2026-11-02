@@ -7,18 +7,16 @@
   box-sizing: border-box;
 }
 
-/* Images fit their container and keep their proportions. */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* READABLE BASE STYLES */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
+/* ORIGINAL HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -29,7 +27,12 @@ header {
 }
 
 .logo {
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 50%;
   background: #eee;
   text-align: center;
 }
@@ -40,56 +43,120 @@ nav {
   gap: 24px;
 }
 
-a {
-  color: #333;
+nav a {
+  color: #666;
+  text-decoration: none;
 }
 
+/* ORIGINAL OPENING */
 main {
-  padding: 2rem 1rem;
-  background: #eee;
+  background: #b2b2b2;
+  text-align: center;
 }
 
-section {
-  padding: 2rem 0;
-  border-bottom: 1px solid #ccc;
+.opening {
+  padding: 40px 20px 60px;
 }
 
 .hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 650px;
+  aspect-ratio: 650 / 600;
   margin: auto;
 }
 
-h1 {
+.circle {
+  position: absolute;
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.phone {
+  position: relative;
+  width: 45%;
+  aspect-ratio: 295 / 480;
+  border: 2px solid black;
+  background: #d9d9d9;
+  transform: rotate(14deg);
+}
+
+.notification {
+  position: absolute;
+  width: 35%;
+  aspect-ratio: 227.5 / 45;
+  border-radius: 30px;
+  background: #808080;
+}
+
+.left {
+  left: 0;
+  top: 200px;
+}
+
+.right {
+  right: 0;
+  bottom: 180px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 20px 50px;
+  border-radius: 50px;
+  background: #666;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+/* CONTENT BELOW THE OPENING */
+/* These sections grow naturally with their content. */
+.content-section {
+  padding: 3rem 1.5rem;
+  border-top: 1px solid #ccc;
+  background: #eee;
+  line-height: 1.6;
+}
+
+.content-section h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-h2 {
+.content-section h2 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-h3 {
+.content-section h3 {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
 
-p {
+.content-section p {
   max-width: 65ch;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 
-.hero img {
+.introduction img {
   display: block;
-  margin: 1rem 0;
+  width: 650px;
+  margin: 1.5rem auto 0;
 }
 
 article {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+/* SIGNUP FORM */
 form {
   max-width: 30rem;
+  margin: auto;
 }
 
 label {
@@ -97,47 +164,195 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input,
-button {
-  font: inherit;
-  padding: 0.75rem;
-}
-
 input {
-  max-width: 100%;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #666;
+  font: inherit;
 }
 
 button {
   margin-top: 1rem;
-  border: 1px solid #666;
-  background: #ddd;
-  color: #222;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background: #666;
+  color: white;
+  font: inherit;
   cursor: pointer;
 }
 
 footer {
-  padding: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
 }
 
-/* PAGE GRID */
+/* ORIGINAL PAGE GRID */
 .page {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-
-  /* Reduced the gap between header and main content. */
   gap: 0.5rem;
 }
 
-/* Each main page element spans all 12 columns. */
 .page > header,
 .page > main,
 .page > footer {
   grid-column: 1 / 13;
 }
 
+/* CALENDAR DASHBOARD */
+.calendar-page .dashboard {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  background: #f4f4f4;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Dashboard title and search span the full page. */
+.calendar-page .dashboard-heading {
+  grid-column: 1 / 13;
+  padding-bottom: 1rem;
+}
+
+.calendar-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-page h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-page .dashboard-heading form {
+  max-width: 30rem;
+  margin: 1rem 0 0;
+}
+
+/* Sidebar and calendar share a row.
+   Their heights are determined by their content. */
+.calendar-page .calendar-sidebar {
+  grid-column: 1 / 4;
+  padding: 1.5rem;
+  background: #ddd;
+}
+
+.calendar-page .calendar-sidebar nav {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.calendar-page .calendar-sidebar nav a {
+  display: block;
+  margin-bottom: 1rem;
+  color: #222;
+  text-decoration: underline;
+}
+
+.calendar-page .calendar-sidebar ul {
+  padding-left: 1.25rem;
+}
+
+.calendar-page .calendar-sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+.calendar-page .calendar-section {
+  grid-column: 4 / 13;
+  min-width: 0;
+  padding: 1rem;
+  background: white;
+  overflow-x: auto;
+}
+
+/* Calendar table */
+.calendar-page .month-calendar {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendar-page caption {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.calendar-page th,
+.calendar-page td {
+  border: 1px solid #ccc;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.calendar-page th {
+  background: #eee;
+  font-size: 0.875rem;
+}
+
+.calendar-page td {
+  padding-bottom: 2rem;
+}
+
+.calendar-page .calendar-event {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem;
+  background: #eee;
+  font-size: 0.875rem;
+}
+
+/* Availability and forms span all 12 columns. */
+.calendar-page .content-section {
+  grid-column: 1 / 13;
+  text-align: left;
+}
+
+.calendar-page .content-section p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.calendar-page form {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.calendar-page input,
+.calendar-page select {
+  margin-bottom: 1rem;
+}
+
+.calendar-page select {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #666;
+  font: inherit;
+}
+
+.calendar-page fieldset {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+}
+
+.calendar-page legend {
+  padding: 0 0.25rem;
+}
+
+.calendar-page input[type="checkbox"] {
+  width: auto;
+  margin: 0 0.5rem 0 0;
+}
+
+
 /* MOBILE LAYOUT */
 @media (max-width: 600px) {
-  /* Stack the logo and navigation on smaller screens. */
   header {
     flex-direction: column;
     padding: 20px;
@@ -146,5 +361,13 @@ footer {
   nav {
     justify-content: center;
     gap: 16px;
+  }
+
+  .left {
+    top: 140px;
+  }
+
+  .right {
+    bottom: 130px;
   }
 }

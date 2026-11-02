@@ -21,7 +21,8 @@ As a busy parent, I want to send reminders to my family so they remember events 
 | Nav | Link | Sign Up | Step 4: find the signup form |
 | Hero | h1 | Keep your family on the same page. | Step 1: understand the purpose |
 | Hero | Paragraph | Share family events, send reminders, and see who is available—all in one place. | Step 1: understand the benefit |
-| Hero | Image | Alt text: A parent planning family activities with a calendar at the kitchen table. | Step 1: picture using the service |
+| Hero | Image | Alt text: A guy planning family activities in a calendar at table. 
+| Step 1: picture using the service |
 | Hero | Link | Start Free | Step 4: jump to the signup form |
 | Features | h2 | Less chasing. More time together. | Step 2: introduce the benefits |
 | Features | h3 + paragraph | One Family Calendar — See appointments, activities, and family plans together so everyone knows what is coming up. | Step 2: explore shared scheduling |
@@ -37,6 +38,9 @@ As a busy parent, I want to send reminders to my family so they remember events 
 | Sign Up | Button | Create My Account | Step 4: complete the signup interface |
 | Footer | Paragraph | © 2026 Calendar Hub | none: project identification |
 
+## What the grid did when the content grew
+
+My introduction takes up more space than the signup section because it contains a large image as well as text. Without fixed section heights, the main area and its grid row can grow to fit all the content, pushing the footer farther down the page. My features are stacked vertically, so I did not see the equal-height stretching that can happen with side-by-side cards.
 
 
 ## Second page: Calendar dashboard
@@ -80,3 +84,5 @@ As a busy parent, I want to send reminders to my family so they remember events 
 | Add Member | Label + email input | Family member’s email address | Step 3: enter invitation details |
 | Add Member | Button | Send Invitation | Step 3: finish the invitation interface |
 | Footer | Paragraph | © 2026 Calendar Hub | none: project identification |
+
+
