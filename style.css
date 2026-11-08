@@ -341,6 +341,13 @@ footer {
   margin: 0 0.5rem 0 0;
 }
 
+/* Flex fits the main navigation because its links form one row.
+   Gap spaces the links, and align-items centres them vertically. */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
 /* MOBILE LAYOUT */
 @media (max-width: 600px) {
