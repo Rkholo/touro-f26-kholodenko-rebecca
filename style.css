@@ -406,6 +406,16 @@ header nav {
   transform: none;
 }
 
+/* Centre the text inside the notification tabs. */
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  color: white;
+  font-size: clamp(0.65rem, 1.5vw, 1rem);
+}
+
 /* Keep responsive overrides at the bottom of the stylesheet. */
 @media (max-width: 600px) {
   /* Stack the main navigation links on narrow screens. */
