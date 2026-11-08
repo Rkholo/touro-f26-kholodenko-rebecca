@@ -362,6 +362,18 @@ header nav {
   margin: 0;
 }
 
+/* Grid keeps the three features in equal columns,
+   with the section heading spanning the row above them. */
+#features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+#features > h2 {
+  grid-column: 1 / -1;
+}
+
 /* MOBILE LAYOUT */
 @media (max-width: 600px) {
   header {
@@ -392,4 +404,19 @@ header nav {
   border: none;
   background: transparent;
   transform: none;
+}
+
+/* Keep responsive overrides at the bottom of the stylesheet. */
+@media (max-width: 600px) {
+  /* Stack the main navigation links on narrow screens. */
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Stack the feature articles and keep their text readable. */
+  #features {
+    grid-template-columns: 1fr;
+  }
 }
