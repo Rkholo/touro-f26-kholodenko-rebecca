@@ -416,6 +416,131 @@ header nav {
   font-size: clamp(0.65rem, 1.5vw, 1rem);
 }
 
+/* CALENDAR PAGE: sidebar beside a large monthly calendar */
+.calendar-page .dashboard {
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 0;
+  padding: 2rem;
+}
+
+.calendar-page .dashboard-heading {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calendar-page .dashboard-heading h1 {
+  flex-basis: 100%;
+}
+
+.calendar-page .dashboard-heading form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.calendar-page .dashboard-heading form label {
+  flex-basis: 100%;
+}
+
+.calendar-page .dashboard-heading input {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+}
+
+.calendar-page .dashboard-heading button {
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+}
+
+.calendar-page .calendar-sidebar {
+  grid-column: 1 / 2;
+  padding: 1.25rem;
+  background: #d9d9d9;
+}
+
+/* Flex stacks the sidebar actions with consistent gaps. */
+.calendar-page .calendar-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.calendar-page .calendar-sidebar nav a {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 24px;
+  background: #b2b2b2;
+  text-decoration: none;
+  text-align: center;
+}
+
+.calendar-page .calendar-sidebar h2 {
+  font-size: 1.125rem;
+}
+
+.calendar-page .calendar-sidebar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.calendar-page .calendar-sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.calendar-page .calendar-sidebar li::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: #808080;
+}
+
+.calendar-page .calendar-sidebar li:nth-child(2)::before {
+  background: #aaa;
+}
+
+.calendar-page .calendar-sidebar li:nth-child(3)::before {
+  background: #eee;
+}
+
+.calendar-page .calendar-sidebar li:nth-child(4)::before {
+  background: #fff;
+}
+
+.calendar-page .calendar-section {
+  grid-column: 2 / 3;
+  padding: 1.25rem;
+}
+
+.calendar-page .month-calendar {
+  min-width: 630px;
+}
+
+.calendar-page .month-calendar td {
+  height: 125px;
+}
+
+.calendar-page .calendar-event {
+  border-left: 3px solid #808080;
+  background: #e5e5e5;
+}
+
+.calendar-page .dashboard > .content-section {
+  grid-column: 1 / -1;
+}
+
+
 /* Keep responsive overrides at the bottom of the stylesheet. */
 @media (max-width: 600px) {
   /* Stack the main navigation links on narrow screens. */
@@ -425,8 +550,28 @@ header nav {
     gap: 16px;
   }
 
-  /* Stack the feature articles and keep their text readable. */
+    /* Stack the feature articles. */
   #features {
     grid-template-columns: 1fr;
+  }
+
+  /* Stack the calendar tools above the calendar on mobile. */
+  .calendar-page .dashboard {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1rem;
+  }
+
+  .calendar-page .calendar-sidebar,
+  .calendar-page .calendar-section {
+    grid-column: 1 / -1;
+  }
+
+  .calendar-page .calendar-sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .calendar-page .calendar-sidebar nav a {
+    flex: 1 1 140px;
   }
 }
