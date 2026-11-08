@@ -349,6 +349,19 @@ header nav {
   gap: 24px;
 }
 
+/* Flex fits each feature article because its heading and description
+   follow one vertical direction. Gap gives them consistent spacing. */
+#features article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#features article h3,
+#features article p {
+  margin: 0;
+}
+
 /* MOBILE LAYOUT */
 @media (max-width: 600px) {
   header {
