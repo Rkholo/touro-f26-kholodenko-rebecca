@@ -7,8 +7,17 @@
   --color-event: #E5E0FF;
 
   --space-s: 0.5rem;
+  --space-sm: 0.75rem;
   --space-m: 1rem;
+  --space-md: 1.25rem;
+  --space-lg: 1.5rem;
   --space-l: 2rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 3.75rem;
+  
+
+  --space-cta-gap: 1.875rem;
+  --space-cta-inline: 3.125rem;
 
   --font-heading: Georgia, serif;
   --font-body: "Trebuchet MS", sans-serif;
@@ -24,12 +33,15 @@
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-text);
 }
 
 /* ORIGINAL HEADER */
@@ -37,8 +49,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 20px 40px;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
   background: var(--color-primary);
 }
 
@@ -56,7 +68,7 @@ header {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
 nav a {
@@ -71,7 +83,7 @@ main {
 }
 
 .opening {
-  padding: 40px 20px 60px;
+  padding: var(--space-xl) var(--space-md) var(--space-2xl);
 }
 
 .hero {
@@ -112,8 +124,8 @@ main {
 
 .cta {
   display: inline-block;
-  margin-top: 30px;
-  padding: 20px 50px;
+  margin-top: var(--space-cta-gap);
+  padding: var(--space-md) var(--space-cta-inline);
   border-radius: 50px;
   background: var(--color-primary);
   color: white;
@@ -124,7 +136,7 @@ main {
 /* CONTENT BELOW THE OPENING */
 /* These sections grow naturally with their content. */
 .content-section {
-  padding: 3rem 1.5rem;
+  padding: 3rem var(--space-lg);
   border-top: 1px solid #ccc;
   background: var(--color-primary);
   line-height: 1.6;
@@ -132,17 +144,17 @@ main {
 
 .content-section h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-m);
 }
 
 .content-section h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-m);
 }
 
 .content-section h3 {
   font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-m);
 }
 
 .content-section p {
@@ -157,7 +169,7 @@ main {
 }
 
 article {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-m);
 }
 
 /* SIGNUP FORM */
@@ -168,7 +180,7 @@ form {
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-m);
 }
 
 input {
@@ -227,12 +239,12 @@ footer {
 
 .calendar-page h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-m);
 }
 
 .calendar-page h2 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-m);
 }
 
 .calendar-page .dashboard-heading form {
@@ -250,12 +262,12 @@ footer {
 
 .calendar-page .calendar-sidebar nav {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-m);
 }
 
 .calendar-page .calendar-sidebar nav a {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-m);
   color: #222;
   text-decoration: underline;
 }
@@ -265,7 +277,7 @@ footer {
 }
 
 .calendar-page .calendar-sidebar li {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-s);
 }
 
 .calendar-page .calendar-section {
@@ -284,7 +296,7 @@ footer {
 }
 
 .calendar-page caption {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-m);
   text-align: left;
 }
 
@@ -298,9 +310,10 @@ footer {
 }
 
 .calendar-page th {
-  background: #eee;
-  font-size: 0.875rem;
+  background: var(--color-primary);
+  color: var(--color-surface);
 }
+
 
 .calendar-page td {
   padding-bottom: 2rem;
@@ -331,7 +344,7 @@ footer {
 
 .calendar-page input,
 .calendar-page select {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-m);
 }
 
 .calendar-page select {
@@ -344,7 +357,7 @@ footer {
 
 .calendar-page fieldset {
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-m);
   border: 1px solid #999;
 }
 
@@ -362,7 +375,7 @@ footer {
 header nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
 /* Flex fits each feature article because its heading and description
@@ -399,7 +412,7 @@ header nav {
 
   nav {
     justify-content: center;
-    gap: 16px;
+    gap: var(--space-m);
   }
 
   .left {
@@ -462,6 +475,7 @@ header nav {
 
 .calendar-page .dashboard-heading form label {
   flex-basis: 100%;
+  margin-bottom: 0;
 }
 
 .calendar-page .dashboard-heading input {
@@ -563,7 +577,7 @@ header nav {
   header nav {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: var(--space-m);
   }
 
     /* Stack the feature articles. */
@@ -610,7 +624,7 @@ header nav {
 }
 
 .introduction p {
-  margin-bottom: 50px;
+  margin-bottom: var(--space-cta-inline);
 }
 
 /* Page background */
@@ -665,12 +679,12 @@ header nav {
 
 h1,
 h2 {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 
 body {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-body);
 }
 
 h1,
@@ -765,6 +779,6 @@ body:not(.calendar-page) .content-section {
 }
 
 .calendar-page .dashboard-heading h1 {
-  margin-bottom: 0;
+  margin-bottom: var(--space-m);
 }
 
