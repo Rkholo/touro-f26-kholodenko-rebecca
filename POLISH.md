@@ -15,6 +15,9 @@
 ## (calendar page) Lighthouse accessibility score (before): 96
 - Background and foreground colors do not have a sufficient contrast ratio
 
+## (homepage) Lighthouse accessibility score (after): 100
+## (calendar page) Lighthouse accessibility score (before): 100
+
 ## Reflection: 
 I linked the “Start for Free” CTA to the calendar page and made the Save Event button add events to the calendar. These changes gave users a clear path from the homepage to planning an event.
 
