@@ -652,6 +652,53 @@ h2 {
   font-weight: 400;
 }
 
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+h1,
+h2,
 h3 {
-  font-family: Trebuchet MS, sans-serif;
+  font-weight: 700;
+}
+
+.logo {
+  background: transparent;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+}
+
+.logo {
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo img {
+  transform: scale(1.6);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  object-position: center;
+  transform-origin: center;
+}
+
+.calendar-event mark {
+  background: #1B02F4;
+  color: white;
+  padding: 2px 4px;
 }
