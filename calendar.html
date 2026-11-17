@@ -281,6 +281,19 @@
       );
     }
 
+    const deleteButton = document.createElement("button");
+deleteButton.type = "button";
+deleteButton.textContent = "Delete event";
+deleteButton.setAttribute("aria-label", "Delete " + name);
+
+deleteButton.addEventListener("click", function () {
+  box.remove();
+  status.textContent = name + " deleted.";
+  document.getElementById("event-name").focus();
+});
+
+box.append(document.createElement("br"), deleteButton);
+
     day.parentElement.append(box);
     form.reset();
 
@@ -288,10 +301,7 @@
     box.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 </script>
-      
-<button type="button" disabled>Search — coming soon</button>
-<button type="button" disabled>Send Invitation — coming soon</button>
-<p>Reminder notifications are coming soon.</p>
+    
 
       <p>© 2026 Calendar Hub</p>
     </footer>
