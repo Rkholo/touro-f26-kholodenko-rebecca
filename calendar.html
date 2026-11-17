@@ -299,11 +299,33 @@ box.append(document.createElement("br"), deleteButton);
 
     status.textContent = name + " added to the calendar.";
     box.scrollIntoView({ behavior: "smooth", block: "center" });
+
   });
+
+document.querySelectorAll(".calendar-event").forEach(function (box) {
+  if (box.querySelector("button")) return;
+
+  const name = box.querySelector("mark").textContent;
+  const deleteButton = document.createElement("button");
+
+  deleteButton.type = "button";
+  deleteButton.textContent = "Delete event";
+  deleteButton.setAttribute("aria-label", "Delete " + name);
+
+  deleteButton.addEventListener("click", function () {
+    box.remove();
+    status.textContent = name + " deleted.";
+    document.getElementById("event-name").focus();
+  });
+
+  box.append(document.createElement("br"), deleteButton);
+});
+
 </script>
-    
+  
 
       <p>© 2026 Calendar Hub</p>
     </footer>
   </body>
 </html>
+
