@@ -143,83 +143,50 @@
 
       <!-- FAMILY AVAILABILITY SECTION -->
       <section class="content-section" id="members">
-        <h2>Family Availability</h2>
+  <h2>Family Availability</h2>
 
-        <p>Elena: Available Sunday after 5 PM.</p>
-        <p>Jordan: Available Sunday after 6 PM.</p>
-      </section>
+  <p id="elena-availability">
+    Elena: Available Sunday after 5 PM.
+  </p>
+  <p id="jordan-availability">
+    Jordan: Available Sunday after 6 PM.
+  </p>
 
-      <!-- ADD EVENT SECTION -->
-      <section class="content-section" id="add-event">
-        <h2>Add a Family Event</h2>
+  <form id="availability-form">
+    <select id="availability-member">
+      <option value="elena">Elena</option>
+      <option value="jordan">Jordan</option>
+    </select>
 
-        <form id="event-form">
-          <label for="event-name">Event name</label>
-          <input
-            type="text"
-            id="event-name"
-            name="event-name"
-            required
-          >
+    <label for="availability-text">Availability</label>
+    <input
+      type="text"
+      id="availability-text"
+      value="Available Sunday after 5 PM."
+      placeholder="For example: Available Monday after 4 PM."
+      required
+    >
 
-          <label for="event-date">Event date</label>
-          <input
-            type="date"
-            id="event-date"
-            name="event-date"
-            required
-          >
+    <button type="submit">Save Availability</button>
+    <p id="availability-status" role="status"></p>
+  </form>
 
-          <label for="event-time">Event time</label>
-          <input
-            type="time"
-            id="event-time"
-            name="event-time"
-            required
-          >
+  <form id="add-member-form">
+  <label for="member-name">New family member’s name</label>
+  <input
+    type="text"
+    id="member-name"
+    name="member-name"
+    placeholder="Enter a name"
+    required
+  >
 
-          <label for="event-location">Location</label>
-          <input
-            type="text"
-            id="event-location"
-            name="event-location"
-          >
+  <button type="submit">Add Member</button>
+  <p id="member-status" role="status"></p>
+</form>
 
-         
-          
+</section>
 
-          <label for="event-reminder">Reminder</label>
-          <select id="event-reminder" name="reminder">
-            <option value="at-event">At event time</option>
-            <option value="one-hour">1 hour before</option>
-            <option value="one-day">1 day before</option>
-          </select>
-
-         <button type="submit">Save Event</button>
-<p id="event-status" role="status"></p>
-        </form>
-      </section>
-
-      <!-- ADD MEMBER SECTION -->
-      <section class="content-section" id="add-member">
-        <h2>Invite a Family Member</h2>
-
-        <form>
-          <label for="member-email">
-            Family member’s email address
-          </label>
-          <input
-            type="email"
-            id="member-email"
-            name="member-email"
-            required
-          >
-
-          <button type="button">Send Invitation</button>
-        </form>
-      </section>
-    </main>
-    
 
     <!-- FOOTER SECTION -->
     <footer>
@@ -319,6 +286,67 @@ document.querySelectorAll(".calendar-event").forEach(function (box) {
   });
 
   box.append(document.createElement("br"), deleteButton);
+
+  document.getElementById("add-member-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nameInput = document.getElementById("member-name");
+    const memberStatus = document.getElementById("member-status");
+    const name = nameInput.value.trim();
+    const dropdown = document.getElementById("availability-member");
+
+    if (!name) {
+      memberStatus.textContent = "Please enter a name.";
+      nameInput.focus();
+      return;
+    }
+
+    const alreadyExists = Array.from(dropdown.options).some(
+      option => option.textContent.toLowerCase() === name.toLowerCase()
+    );
+
+    if (alreadyExists) {
+      memberStatus.textContent = "That member is already listed.";
+      nameInput.focus();
+      return;
+    }
+
+    let memberId = "member-" + Date.now();
+
+    while (document.getElementById(memberId + "-availability")) {
+      memberId += "-new";
+    }
+
+    const paragraph = document.createElement("p");
+    paragraph.id = memberId + "-availability";
+    paragraph.textContent = name + ": Availability not set.";
+
+    const availabilityForm =
+      document.getElementById("availability-form");
+
+    availabilityForm.before(paragraph);
+
+    const option = document.createElement("option");
+    option.value = memberId;
+    option.textContent = name;
+    dropdown.append(option);
+
+    dropdown.value = memberId;
+    document.getElementById("availability-text").value = "";
+
+    memberStatus.textContent =
+      name + " added. Enter their availability above.";
+
+    nameInput.value = "";
+    availabilityForm.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+    document.getElementById("availability-text")
+      .focus({ preventScroll: true });
+  });
+
 });
 
 </script>
