@@ -1,358 +1,440 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Family Calendar | Calendar Hub</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Family Calendar | Calendar Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <body class="page calendar-page">
-    <!-- HEADER SECTION -->
-    <header>
-      <div class="logo">Calendar Hub</div>
+<body class="page calendar-page">
+  <header>
+    <div class="logo">Calendar Hub</div>
 
-      <nav aria-label="Main navigation">
-        <a href="index.html">Back to Home</a>
-        <a href="#calendar">Calendar</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Back to Home</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#add-event">Add Event</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="dashboard-heading">
+      <h1>Your Family Calendar</h1>
+      <p>See what is coming up and plan together.</p>
+
+      <form role="search" id="search-form">
+        <label for="event-search">Search family events</label>
+        <input type="search" id="event-search" name="search">
+        <button type="submit">Search</button>
+        <p id="search-status" role="status"></p>
+      </form>
+    </section>
+
+    <aside class="calendar-sidebar" aria-label="Calendar tools">
+      <nav aria-label="Calendar actions">
         <a href="#add-event">Add Event</a>
+        <a href="#member-name">Add Member</a>
+        <a href="#members">View Members’ Schedules</a>
       </nav>
-    </header>
 
-    <main class="dashboard">
-      <!-- DASHBOARD INTRODUCTION -->
-      <section class="dashboard-heading">
-        <h1>Your Family Calendar</h1>
-        <p>See what is coming up and plan together.</p>
+      <h2>Categories</h2>
+      <ul>
+        <li>Personal</li>
+        <li>Family</li>
+        <li>Work</li>
+        <li>School</li>
+      </ul>
+    </aside>
 
-        <!-- SEARCH FORM -->
-        <form role="search">
-          <label for="event-search">Search family events</label>
-          <input
-            type="search"
-            id="event-search"
-            name="search"
-          >
-          <button type="button">Search</button>
-        </form>
-      </section>
+    <section class="calendar-section" id="calendar">
+      <h2>November 2026</h2>
 
-      <!-- SIDEBAR SECTION -->
-      <aside class="calendar-sidebar" aria-label="Calendar tools">
-        <nav aria-label="Calendar actions">
-          <a href="#add-event">Add Event</a>
-          <a href="#add-member">Add Member</a>
-          <a href="#members">View Members’ Schedules</a>
-        </nav>
+      <table class="month-calendar">
+        <caption>Family events for November 2026</caption>
 
-        <h2>Categories</h2>
-        <ul>
-          <li>Personal</li>
-          <li>Family</li>
-          <li>Work</li>
-          <li>School</li>
-        </ul>
-      </aside>
+        <thead>
+          <tr>
+            <th scope="col">Sunday</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+            <th scope="col">Saturday</th>
+          </tr>
+        </thead>
 
-      <!-- MONTHLY CALENDAR SECTION -->
-      <section class="calendar-section" id="calendar">
-        <h2>November 2026</h2>
+        <tbody>
+          <tr>
+            <td><time datetime="2026-11-01">1</time></td>
+            <td><time datetime="2026-11-02">2</time></td>
+            <td><time datetime="2026-11-03">3</time></td>
+            <td><time datetime="2026-11-04">4</time></td>
+            <td><time datetime="2026-11-05">5</time></td>
+            <td><time datetime="2026-11-06">6</time></td>
+            <td><time datetime="2026-11-07">7</time></td>
+          </tr>
 
-        <table class="month-calendar">
-          <caption>
-            Family events for November 2026
-          </caption>
+          <tr>
+            <td>
+              <time datetime="2026-11-08">8</time>
+              <p class="calendar-event">
+                <mark>Family Dinner</mark><br>
+                <time datetime="2026-11-08T18:00">6:00 PM</time>
+              </p>
+            </td>
+            <td><time datetime="2026-11-09">9</time></td>
+            <td>
+              <time datetime="2026-11-10">10</time>
+              <p class="calendar-event">
+                <mark>Soccer Practice</mark><br>
+                <time datetime="2026-11-10T16:00">4:00 PM</time>
+              </p>
+            </td>
+            <td><time datetime="2026-11-11">11</time></td>
+            <td><time datetime="2026-11-12">12</time></td>
+            <td><time datetime="2026-11-13">13</time></td>
+            <td><time datetime="2026-11-14">14</time></td>
+          </tr>
 
-          <thead>
-            <tr>
-              <th scope="col">Sunday</th>
-              <th scope="col">Monday</th>
-              <th scope="col">Tuesday</th>
-              <th scope="col">Wednesday</th>
-              <th scope="col">Thursday</th>
-              <th scope="col">Friday</th>
-              <th scope="col">Saturday</th>
-            </tr>
-          </thead>
+          <tr>
+            <td><time datetime="2026-11-15">15</time></td>
+            <td><time datetime="2026-11-16">16</time></td>
+            <td><time datetime="2026-11-17">17</time></td>
+            <td><time datetime="2026-11-18">18</time></td>
+            <td><time datetime="2026-11-19">19</time></td>
+            <td><time datetime="2026-11-20">20</time></td>
+            <td><time datetime="2026-11-21">21</time></td>
+          </tr>
 
-          <tbody>
-            <tr>
-              <td><time datetime="2026-11-01">1</time></td>
-              <td><time datetime="2026-11-02">2</time></td>
-              <td><time datetime="2026-11-03">3</time></td>
-              <td><time datetime="2026-11-04">4</time></td>
-              <td><time datetime="2026-11-05">5</time></td>
-              <td><time datetime="2026-11-06">6</time></td>
-              <td><time datetime="2026-11-07">7</time></td>
-            </tr>
+          <tr>
+            <td><time datetime="2026-11-22">22</time></td>
+            <td><time datetime="2026-11-23">23</time></td>
+            <td><time datetime="2026-11-24">24</time></td>
+            <td><time datetime="2026-11-25">25</time></td>
+            <td><time datetime="2026-11-26">26</time></td>
+            <td><time datetime="2026-11-27">27</time></td>
+            <td><time datetime="2026-11-28">28</time></td>
+          </tr>
 
-            <tr>
-              <td>
-                <time datetime="2026-11-08">8</time>
-                <p class="calendar-event">
-                  <mark>Family Dinner</mark><br>
-                  <time datetime="2026-11-08T18:00">6:00 PM</time>
-                </p>
-              </td>
-              <td><time datetime="2026-11-09">9</time></td>
-              <td>
-                <time datetime="2026-11-10">10</time>
-                <p class="calendar-event">
-                  <mark>Soccer Practice</mark><br>
-                  <time datetime="2026-11-10T16:00">4:00 PM</time>
-                </p>
-              </td>
-              <td><time datetime="2026-11-11">11</time></td>
-              <td><time datetime="2026-11-12">12</time></td>
-              <td><time datetime="2026-11-13">13</time></td>
-              <td><time datetime="2026-11-14">14</time></td>
-            </tr>
+          <tr>
+            <td><time datetime="2026-11-29">29</time></td>
+            <td><time datetime="2026-11-30">30</time></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-            <tr>
-              <td><time datetime="2026-11-15">15</time></td>
-              <td><time datetime="2026-11-16">16</time></td>
-              <td><time datetime="2026-11-17">17</time></td>
-              <td><time datetime="2026-11-18">18</time></td>
-              <td><time datetime="2026-11-19">19</time></td>
-              <td><time datetime="2026-11-20">20</time></td>
-              <td><time datetime="2026-11-21">21</time></td>
-            </tr>
+    <section class="content-section" id="members">
+      <h2>Add or Edit Family Members</h2>
 
-            <tr>
-              <td><time datetime="2026-11-22">22</time></td>
-              <td><time datetime="2026-11-23">23</time></td>
-              <td><time datetime="2026-11-24">24</time></td>
-              <td><time datetime="2026-11-25">25</time></td>
-              <td><time datetime="2026-11-26">26</time></td>
-              <td><time datetime="2026-11-27">27</time></td>
-              <td><time datetime="2026-11-28">28</time></td>
-            </tr>
+      <p id="elena-availability">
+        Elena: Available Sunday after 5 PM.
+      </p>
+      <p id="jordan-availability">
+        Jordan: Available Sunday after 6 PM.
+      </p>
 
-            <tr>
-              <td><time datetime="2026-11-29">29</time></td>
-              <td><time datetime="2026-11-30">30</time></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <form id="availability-form">
+        <select id="availability-member" aria-label="Family member">
+          <option value="elena">Elena</option>
+          <option value="jordan">Jordan</option>
+        </select>
 
-      <!-- FAMILY AVAILABILITY SECTION -->
-      <section class="content-section" id="members">
-  <h2>Family Availability</h2>
+        <label for="availability-text">Availability</label>
+        <input
+          type="text"
+          id="availability-text"
+          value="Available Sunday after 5 PM."
+          placeholder="For example: Available Monday after 4 PM."
+          required
+        >
 
-  <p id="elena-availability">
-    Elena: Available Sunday after 5 PM.
-  </p>
-  <p id="jordan-availability">
-    Jordan: Available Sunday after 6 PM.
-  </p>
+        <button type="submit">Save Availability</button>
+        <p id="availability-status" role="status"></p>
+      </form>
 
-  <form id="availability-form">
-    <select id="availability-member">
-      <option value="elena">Elena</option>
-      <option value="jordan">Jordan</option>
-    </select>
+      <form id="add-member-form">
+        <label for="member-name">New family member’s name</label>
+        <input
+          type="text"
+          id="member-name"
+          name="member-name"
+          placeholder="Enter a name"
+          required
+        >
 
-    <label for="availability-text">Availability</label>
-    <input
-      type="text"
-      id="availability-text"
-      value="Available Sunday after 5 PM."
-      placeholder="For example: Available Monday after 4 PM."
-      required
-    >
+        <button type="submit">Add Member</button>
+        <p id="member-status" role="status"></p>
+      </form>
+    </section>
 
-    <button type="submit">Save Availability</button>
-    <p id="availability-status" role="status"></p>
-  </form>
+    <section class="content-section" id="add-event">
+      <h2>Add a Family Event</h2>
 
-  <form id="add-member-form">
-  <label for="member-name">New family member’s name</label>
-  <input
-    type="text"
-    id="member-name"
-    name="member-name"
-    placeholder="Enter a name"
-    required
-  >
+      <form id="event-form">
+        <label for="event-name">Event name</label>
+        <input type="text" id="event-name" name="event-name" required>
 
-  <button type="submit">Add Member</button>
-  <p id="member-status" role="status"></p>
-</form>
+        <label for="event-date">Event date</label>
+        <input
+          type="date"
+          id="event-date"
+          name="event-date"
+          min="2026-11-01"
+          max="2026-11-30"
+          required
+        >
 
-</section>
+        <label for="event-time">Event time</label>
+        <input type="time" id="event-time" name="event-time" required>
 
+        <label for="event-location">Location</label>
+        <input type="text" id="event-location" name="event-location">
 
-    <!-- FOOTER SECTION -->
-    <footer>
+        <label for="event-reminder">Reminder</label>
+        <select
+          id="event-reminder"
+          name="reminder"
+          aria-describedby="reminder-note"
+        >
+          <option value="at-event">At event time</option>
+          <option value="one-hour">1 hour before</option>
+          <option value="one-day">1 day before</option>
+        </select>
 
-      <script>
-  const form = document.getElementById("event-form");
-  const status = document.getElementById("event-status");
+        <p id="reminder-note">
+          Reminder notifications are coming soon.
+        </p>
 
-  const dateField = document.getElementById("event-date");
-  dateField.min = "2026-11-01";
-  dateField.max = "2026-11-30";
+        <button type="submit">Save Event</button>
+        <p id="event-status" role="status"></p>
+      </form>
+    </section>
+  </main>
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  <footer>
+    <p>© 2026 Calendar Hub</p>
+  </footer>
 
-    const nameField = document.getElementById("event-name");
-    const name = nameField.value.trim();
-    const date = dateField.value;
-    const time = document.getElementById("event-time").value;
-    const location =
-      document.getElementById("event-location").value.trim();
+  <script>
+    // EVENT DELETION
+    const eventForm = document.getElementById("event-form");
+    const eventStatus = document.getElementById("event-status");
 
-    if (!name) {
-      status.textContent = "Please enter an event name.";
-      nameField.focus();
-      return;
+    function addDeleteButton(box) {
+      if (box.querySelector("button")) return;
+
+      const name = box.querySelector("mark").textContent;
+      const button = document.createElement("button");
+
+      button.type = "button";
+      button.textContent = "Delete event";
+      button.setAttribute("aria-label", "Delete " + name);
+
+      button.addEventListener("click", function () {
+        box.remove();
+        eventStatus.textContent = name + " deleted.";
+        document.getElementById("event-name").focus();
+      });
+
+      box.append(document.createElement("br"), button);
     }
 
-    const day = document.querySelector(
-      '.month-calendar td > time[datetime="' + date + '"]'
-    );
+    document.querySelectorAll(".calendar-event")
+      .forEach(addDeleteButton);
 
-    if (!day) {
-      status.textContent = "Choose a date in November 2026.";
-      return;
-    }
+    // ADD EVENTS
+    eventForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    const box = document.createElement("p");
-    box.className = "calendar-event";
+      const nameField = document.getElementById("event-name");
+      const name = nameField.value.trim();
+      const date = document.getElementById("event-date").value;
+      const time = document.getElementById("event-time").value;
+      const location =
+        document.getElementById("event-location").value.trim();
 
-    const title = document.createElement("mark");
-    title.textContent = name;
+      if (!name) {
+        eventStatus.textContent = "Please enter an event name.";
+        nameField.focus();
+        return;
+      }
 
-    const clock = document.createElement("time");
-    clock.dateTime = date + "T" + time;
-
-    const [hours, minutes] = time.split(":").map(Number);
-    clock.textContent =
-      (hours % 12 || 12) + ":" +
-      String(minutes).padStart(2, "0") +
-      (hours >= 12 ? " PM" : " AM");
-
-    box.append(title, document.createElement("br"), clock);
-
-    if (location) {
-      box.append(
-        document.createElement("br"),
-        document.createTextNode(location)
+      const day = document.querySelector(
+        '.month-calendar td > time[datetime="' + date + '"]'
       );
-    }
 
-    const deleteButton = document.createElement("button");
-deleteButton.type = "button";
-deleteButton.textContent = "Delete event";
-deleteButton.setAttribute("aria-label", "Delete " + name);
+      if (!day) {
+        eventStatus.textContent = "Choose a date in November 2026.";
+        return;
+      }
 
-deleteButton.addEventListener("click", function () {
-  box.remove();
-  status.textContent = name + " deleted.";
-  document.getElementById("event-name").focus();
-});
+      const box = document.createElement("p");
+      box.className = "calendar-event";
 
-box.append(document.createElement("br"), deleteButton);
+      const title = document.createElement("mark");
+      title.textContent = name;
 
-    day.parentElement.append(box);
-    form.reset();
+      const clock = document.createElement("time");
+      clock.dateTime = date + "T" + time;
 
-    status.textContent = name + " added to the calendar.";
-    box.scrollIntoView({ behavior: "smooth", block: "center" });
+      const [hours, minutes] = time.split(":").map(Number);
+      clock.textContent =
+        (hours % 12 || 12) + ":" +
+        String(minutes).padStart(2, "0") +
+        (hours >= 12 ? " PM" : " AM");
 
-  });
+      box.append(title, document.createElement("br"), clock);
 
-document.querySelectorAll(".calendar-event").forEach(function (box) {
-  if (box.querySelector("button")) return;
+      if (location) {
+        box.append(
+          document.createElement("br"),
+          document.createTextNode(location)
+        );
+      }
 
-  const name = box.querySelector("mark").textContent;
-  const deleteButton = document.createElement("button");
+      box.dataset.reminder =
+        document.getElementById("event-reminder").value;
 
-  deleteButton.type = "button";
-  deleteButton.textContent = "Delete event";
-  deleteButton.setAttribute("aria-label", "Delete " + name);
+      addDeleteButton(box);
+      day.parentElement.append(box);
+      eventForm.reset();
 
-  deleteButton.addEventListener("click", function () {
-    box.remove();
-    status.textContent = name + " deleted.";
-    document.getElementById("event-name").focus();
-  });
+      eventStatus.textContent = name + " added to the calendar.";
+      box.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
 
-  box.append(document.createElement("br"), deleteButton);
-
-  document.getElementById("add-member-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const nameInput = document.getElementById("member-name");
-    const memberStatus = document.getElementById("member-status");
-    const name = nameInput.value.trim();
-    const dropdown = document.getElementById("availability-member");
-
-    if (!name) {
-      memberStatus.textContent = "Please enter a name.";
-      nameInput.focus();
-      return;
-    }
-
-    const alreadyExists = Array.from(dropdown.options).some(
-      option => option.textContent.toLowerCase() === name.toLowerCase()
-    );
-
-    if (alreadyExists) {
-      memberStatus.textContent = "That member is already listed.";
-      nameInput.focus();
-      return;
-    }
-
-    let memberId = "member-" + Date.now();
-
-    while (document.getElementById(memberId + "-availability")) {
-      memberId += "-new";
-    }
-
-    const paragraph = document.createElement("p");
-    paragraph.id = memberId + "-availability";
-    paragraph.textContent = name + ": Availability not set.";
-
+    // EDIT AVAILABILITY
     const availabilityForm =
       document.getElementById("availability-form");
+    const memberSelect =
+      document.getElementById("availability-member");
+    const availabilityInput =
+      document.getElementById("availability-text");
+    const availabilityStatus =
+      document.getElementById("availability-status");
 
-    availabilityForm.before(paragraph);
+    memberSelect.addEventListener("change", function () {
+      const text = document.getElementById(
+        memberSelect.value + "-availability"
+      ).textContent.trim();
 
-    const option = document.createElement("option");
-    option.value = memberId;
-    option.textContent = name;
-    dropdown.append(option);
-
-    dropdown.value = memberId;
-    document.getElementById("availability-text").value = "";
-
-    memberStatus.textContent =
-      name + " added. Enter their availability above.";
-
-    nameInput.value = "";
-    availabilityForm.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
+      availabilityInput.value = text.slice(text.indexOf(": ") + 2);
     });
-    document.getElementById("availability-text")
-      .focus({ preventScroll: true });
-  });
 
-});
+    availabilityForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-</script>
+      const text = availabilityInput.value.trim();
 
-      <p>© 2026 Calendar Hub</p>
-    </footer>
-  </body>
+      if (!text) {
+        availabilityStatus.textContent = "Please enter availability.";
+        availabilityInput.focus();
+        return;
+      }
+
+      const name = memberSelect.selectedOptions[0].textContent;
+
+      document.getElementById(
+        memberSelect.value + "-availability"
+      ).textContent = name + ": " + text;
+
+      availabilityStatus.textContent =
+        name + "’s availability updated.";
+    });
+
+    // ADD MEMBERS
+    document.getElementById("add-member-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nameInput = document.getElementById("member-name");
+        const memberStatus = document.getElementById("member-status");
+        const name = nameInput.value.trim();
+
+        if (!name) {
+          memberStatus.textContent = "Please enter a name.";
+          nameInput.focus();
+          return;
+        }
+
+        const exists = Array.from(memberSelect.options).some(
+          option =>
+            option.textContent.toLowerCase() === name.toLowerCase()
+        );
+
+        if (exists) {
+          memberStatus.textContent = "That member is already listed.";
+          nameInput.focus();
+          return;
+        }
+
+        let id = "member-" + Date.now();
+
+        while (document.getElementById(id + "-availability")) {
+          id += "-new";
+        }
+
+        const paragraph = document.createElement("p");
+        paragraph.id = id + "-availability";
+        paragraph.textContent = name + ": Availability not set.";
+        availabilityForm.before(paragraph);
+
+        const option = document.createElement("option");
+        option.value = id;
+        option.textContent = name;
+        memberSelect.append(option);
+
+        memberSelect.value = id;
+        availabilityInput.value = "";
+        nameInput.value = "";
+
+        memberStatus.textContent = name + " added.";
+        availabilityStatus.textContent =
+          "Enter availability for " + name + ".";
+
+        availabilityInput.focus();
+      });
+
+    // SEARCH EVENTS BY NAME
+    document.getElementById("search-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const query =
+          document.getElementById("event-search").value.trim()
+            .toLowerCase();
+        const searchStatus = document.getElementById("search-status");
+
+        if (!query) {
+          searchStatus.textContent = "Enter an event name.";
+          return;
+        }
+
+        const match = Array.from(
+          document.querySelectorAll(".calendar-event")
+        ).find(box =>
+          box.querySelector("mark").textContent.toLowerCase()
+            .includes(query)
+        );
+
+        if (!match) {
+          searchStatus.textContent = "No matching event found.";
+          return;
+        }
+
+        searchStatus.textContent =
+          "Found: " + match.querySelector("mark").textContent;
+
+        match.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  </script>
+</body>
 </html>
-
