@@ -782,4 +782,9 @@ body:not(.calendar-page) .content-section {
   margin-bottom: var(--space-m);
 }
 
-
+.calendar-event button {
+  font-size: 0.75rem;
+  padding: var(--space-s) var(--space-sm);
+  margin-top: var(--space-s);
+  border-radius: 6px;
+}
