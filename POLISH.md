@@ -24,3 +24,7 @@ I linked the “Start for Free” CTA to the calendar page and made the Save Eve
 I added bright blue accents and baby blue backgrounds to give the page a more consistent visual identity. Using colour on buttons helped separate clickable actions from the surrounding content.
 
 I made sure the Add Event CTA worked and added a Delete Event option so users could remove events they no longer needed. This made the calendar more useful by letting users correct mistakes.
+
+## Midterm Reflection
+
+The homepage gives users a clear way to get to the calendar, and the calendar lets them add and delete events. I’m proudest of showing a new event right on the day the user picked because they can see immediately that it saved in the right place. Before the final, I want to make events stay on the calendar after the page is refreshed. I also want to check that the calendar is easy to use on a phone.
