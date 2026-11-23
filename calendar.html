@@ -35,7 +35,7 @@
       <nav aria-label="Calendar actions">
         <a href="#add-event">Add Event</a>
         <a href="#member-name">Add Member</a>
-        <a href="#members">View Members’ Schedules</a>
+        <a href="#members">Personalize Schedule</a>
       </nav>
 
       <h2>Categories</h2>
@@ -132,7 +132,8 @@
     </section>
 
     <section class="content-section" id="members">
-      <h2>Add or Edit Family Members</h2>
+      <h2>Personalize Schedule</h2>
+      <p>Choose a family member to update their availability below.</p>
 
       <p id="elena-availability">
         Elena: Available Sunday after 5 PM.
@@ -142,7 +143,8 @@
       </p>
 
       <form id="availability-form">
-        <select id="availability-member" aria-label="Family member">
+        <label for="availability-member">Family member</label>
+        <select id="availability-member">
           <option value="elena">Elena</option>
           <option value="jordan">Jordan</option>
         </select>
@@ -161,6 +163,7 @@
       </form>
 
       <form id="add-member-form">
+        <h3>Add a Family Member</h3>
         <label for="member-name">New family member’s name</label>
         <input
           type="text"
