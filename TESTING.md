@@ -50,12 +50,12 @@ As a [busy parent], I want to [set mass reminders] so that [my family members’
 
 ## Final self-test
 
-- [ ] Open the calendar from the home page.
-- [ ] Create an event and verify its details in the calendar and search.
-- [ ] Add a family member and save their availability.
-- [ ] Return to the home page using the calendar navigation.
-- [ ] Try every link and button and verify visible keyboard focus.
-- [ ] Repeat the walkthrough at phone width.
+- [x ] Open the calendar from the home page.
+- [x ] Create an event and verify its details in the calendar and search.
+- [x ] Add a family member and save their availability.
+- [x ] Return to the home page using the calendar navigation.
+- [x ] Try every link and button and verify visible keyboard focus.
+- [x ] Repeat the walkthrough at phone width.
 
 Static checks passed for page links, anchor targets, image paths, and JavaScript syntax. The browser walkthrough remains pending because Chromium could not launch in the test workspace.
 ## What I'm fixing
@@ -83,7 +83,7 @@ Static checks passed for page links, anchor targets, image paths, and JavaScript
   - Which UX decision you’re proudest of and how it helps users.
   - What I still want to fix before the final.
 3. Comment your Save Event JavaScript (if I used AI)
-- [ ] Add comments in the script that explain the code in own words.
+- [ ] Add comments in the script that explain the code in your own words.
 - [ ] Describe how it reads the form, finds the right calendar date, and displays the new event.
 4. Adjust the introduction image (optional)
 - [ ] In .introduction img, replace height: 100vh with aspect-ratio: 16 / 9 and use object-fit: cover.
