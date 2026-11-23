@@ -72,19 +72,19 @@ Static checks passed for page links, anchor targets, image paths, and JavaScript
 5. 
 
 1. Finish moving colors into CSS variables
-- [ ] In style.css, choose two or three grays to keep.
-- [ ] Add them to :root with names that describe their purpose, such as --color-border and --color-muted.
-- [ ] Replace the roughly 20 hardcoded gray values, including #eee, #ccc, #666, #d9d9d9, and #808080, with the appropriate variables.
-- [ ] Around line 660, replace #1B02F4 with var(--color-primary).
-- [ ] Run the hotpink test. Temporarily set --color-primary to hotpink, check that the element changes color, then restore #1B02F4.
+- [x ] In style.css, choose two or three grays to keep.
+- [x ] Add them to :root with names that describe their purpose, such as --color-border and --color-muted.
+- [x ] Replace the roughly 20 hardcoded gray values, including #eee, #ccc, #666, #d9d9d9, and #808080, with the appropriate variables.
+- [x ] Around line 660, replace #1B02F4 with var(--color-primary).
+- [x ] Run the hotpink test. Temporarily set --color-primary to hotpink, check that the element changes color, then restore #1B02F4.
 2. Add midterm reflection
 - [ ] At the bottom of POLISH.md, write 3–5 sentences that cover:
   - What’s working well in Calendar Hub.
   - Which UX decision you’re proudest of and how it helps users.
   - What I still want to fix before the final.
 3. Comment your Save Event JavaScript (if I used AI)
-- [ ] Add comments in the script that explain the code in your own words.
-- [ ] Describe how it reads the form, finds the right calendar date, and displays the new event.
+- [x ] Add comments in the script that explain the code in your own words.
+- [x ] Describe how it reads the form, finds the right calendar date, and displays the new event.
 4. Adjust the introduction image (optional)
-- [ ] In .introduction img, replace height: 100vh with aspect-ratio: 16 / 9 and use object-fit: cover.
-- [ ] Check the image on a phone held sideways to see how it crops.
+- [x ] In .introduction img, replace height: 100vh with aspect-ratio: 16 / 9 and use object-fit: cover.
+- [x ] Check the image on a phone held sideways to see how it crops.
