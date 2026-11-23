@@ -5,6 +5,14 @@
   --color-surface: #FFFFFF;
   --color-section: #DCEEFF;
   --color-event: #E5E0FF;
+  --color-muted: #eee;
+  --color-border: #ccc;
+  --color-control-border: #666;
+  --color-hero-gradient-light: #DCE6FF;
+  --color-hero-gradient-dark: #4169E1;
+  --color-category-purple: #A99BFF;
+  --color-category-pink: #F4BDCF;
+  --color-category-green: #A8D8C0;
 
   --space-s: 0.5rem;
   --space-sm: 0.75rem;
@@ -61,7 +69,7 @@ header {
   width: 90px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #eee;
+  background: var(--color-muted);
   text-align: center;
 }
 
@@ -101,7 +109,7 @@ main {
   width: 90%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: linear-gradient(135deg, #DCE6FF, #4169E1);
+  background: linear-gradient(135deg, var(--color-hero-gradient-light), var(--color-hero-gradient-dark));
 }
 
 .notification {
@@ -128,7 +136,7 @@ main {
   padding: var(--space-md) var(--space-cta-inline);
   border-radius: 50px;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-surface);
   font-size: 28px;
   text-decoration: none;
 }
@@ -137,7 +145,7 @@ main {
 /* These sections grow naturally with their content. */
 .content-section {
   padding: 3rem var(--space-lg);
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--color-border);
   background: var(--color-primary);
   line-height: 1.6;
 }
@@ -186,7 +194,7 @@ label {
 input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #666;
+  border: 1px solid var(--color-control-border);
   font: inherit;
 }
 
@@ -196,7 +204,7 @@ button {
   border: none;
   border-radius: 50px;
   background: var(--color-primary);
-  color: white;
+  color: var(--color-surface);
   font: inherit;
   cursor: pointer;
 }
@@ -226,7 +234,6 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
   padding: 2rem;
-  background: #f4f4f4;
   text-align: left;
   line-height: 1.6;
 }
@@ -257,7 +264,6 @@ footer {
 .calendar-page .calendar-sidebar {
   grid-column: 1 / 4;
   padding: 1.5rem;
-  background: #ddd;
 }
 
 .calendar-page .calendar-sidebar nav {
@@ -268,7 +274,6 @@ footer {
 .calendar-page .calendar-sidebar nav a {
   display: block;
   margin-bottom: var(--space-m);
-  color: #222;
   text-decoration: underline;
 }
 
@@ -284,7 +289,7 @@ footer {
   grid-column: 4 / 13;
   min-width: 0;
   padding: 1rem;
-  background: white;
+  background: var(--color-surface);
   overflow-x: auto;
 }
 
@@ -302,7 +307,7 @@ footer {
 
 .calendar-page th,
 .calendar-page td {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   padding: 0.75rem 0.5rem;
   text-align: left;
   vertical-align: top;
@@ -322,7 +327,7 @@ footer {
 .calendar-page .calendar-event {
   margin: 0.5rem 0 0;
   padding: 0.5rem;
-  background: #eee;
+  background: var(--color-muted);
   font-size: 0.875rem;
 }
 
@@ -351,14 +356,14 @@ footer {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #666;
+  border: 1px solid var(--color-control-border);
   font: inherit;
 }
 
 .calendar-page fieldset {
   padding: 1rem;
   margin-bottom: var(--space-m);
-  border: 1px solid #999;
+  border: 1px solid var(--color-control-border);
 }
 
 .calendar-page legend {
@@ -441,7 +446,7 @@ header nav {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  color: white;
+  color: var(--color-surface);
   font-size: clamp(0.65rem, 1.5vw, 1rem);
 }
 
@@ -493,7 +498,6 @@ header nav {
 .calendar-page .calendar-sidebar {
   grid-column: 1 / 2;
   padding: 1.25rem;
-  background: #d9d9d9;
 }
 
 /* Flex stacks the sidebar actions with consistent gaps. */
@@ -508,7 +512,6 @@ header nav {
   margin: 0;
   padding: 0.75rem;
   border-radius: 24px;
-  background: #b2b2b2;
   text-decoration: none;
   text-align: center;
 }
@@ -533,19 +536,6 @@ header nav {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  background: #808080;
-}
-
-.calendar-page .calendar-sidebar li:nth-child(2)::before {
-  background: #aaa;
-}
-
-.calendar-page .calendar-sidebar li:nth-child(3)::before {
-  background: #eee;
-}
-
-.calendar-page .calendar-sidebar li:nth-child(4)::before {
-  background: var(--color-surface);
 }
 
 .calendar-page .calendar-section {
@@ -562,8 +552,8 @@ header nav {
 }
 
 .calendar-page .calendar-event {
-  border-left: 3px solid #808080;
-  background: #e5e5e5;
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-event);
 }
 
 .calendar-page .dashboard > .content-section {
@@ -641,7 +631,7 @@ header nav {
 /* Sidebar buttons */
 .calendar-page .calendar-sidebar nav a {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-surface);
 }
 
 /* Calendar background */
@@ -654,27 +644,21 @@ header nav {
   background: var(--color-primary);
 }
 
-/* Event boxes */
-.calendar-page .calendar-event {
-  background: var(--color-event);
-  border-left-color: #1B02F4;
-}
-
 /* Category squares */
 .calendar-page .calendar-sidebar li::before {
   background: var(--color-primary);
 }
 
 .calendar-page .calendar-sidebar li:nth-child(2)::before {
-  background: #A99BFF;
+  background: var(--color-category-purple);
 }
 
 .calendar-page .calendar-sidebar li:nth-child(3)::before {
-  background: #F4BDCF;
+  background: var(--color-category-pink);
 }
 
 .calendar-page .calendar-sidebar li:nth-child(4)::before {
-  background: #A8D8C0;
+  background: var(--color-category-green);
 }
 
 h1,
@@ -705,7 +689,7 @@ h3 {
 .logo {
   border-radius: 50%;
   overflow: hidden;
-  background: white;
+  background: var(--color-surface);
 }
 
 .logo img {
@@ -730,7 +714,7 @@ h3 {
 
 .calendar-event mark {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-surface);
   padding: 2px 4px;
 }
 
@@ -787,4 +771,11 @@ body:not(.calendar-page) .content-section {
   padding: var(--space-s) var(--space-sm);
   margin-top: var(--space-s);
   border-radius: 6px;
+}
+
+@media (max-width: 600px), (max-height: 500px) and (orientation: landscape) {
+  .introduction img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }
