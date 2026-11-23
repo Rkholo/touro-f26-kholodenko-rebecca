@@ -25,7 +25,7 @@ As a [busy parent], I want to [set mass reminders] so that [my family members’
 ### Should fix (slowed a tester down)
 
 3. Both testers said the Delete event buttons were too large → shorten the visible label and reduce the padding while keeping the buttons easy to tap.
-4. Both testers said the colors felt too professional for a family calendar → use a softer teal and warm cream palette with readable contrast.
+4. Both testers said the colors felt too professional for a family calendar → use a softer blue and warm cream palette with readable contrast.
 
 ### From my Assignment 9 feedback
 
@@ -39,7 +39,7 @@ As a [busy parent], I want to [set mass reminders] so that [my family members’
 1. Neither tester found a way to customize their schedule. The calendar tools now link to **Personalize Schedule**, where users can choose a family member and save their availability.
 2. Search didn't show events during testing. It now lists matching event names, dates, and times. Each result takes the user to its event.
 3. Both testers wanted smaller Delete event buttons. I had already reduced the buttons, so this round keeps that sizing.
-4. Both testers wanted a warmer look. I switched to deep teal for actions, warm cream for the calendar background, and soft mint for events.
+4. Both testers wanted a warmer look. I switched to muted blue for actions, warm cream for the calendar background, and pale blue for events.
 5. For Assignment 9, I replaced hardcoded grays with shared variables, used the primary variable for event borders, added the midterm reflection and Save Event comments, and set the introduction image to 16:9 at phone sizes.
 
 ## Still on my list
