@@ -227,8 +227,10 @@
     <p>© 2026 Calendar Hub</p>
   </footer>
 
+
   <script>
     // EVENT DELETION
+    // When I click Delete event, it removes that event from the calendar.
     const eventForm = document.getElementById("event-form");
     const eventStatus = document.getElementById("event-status");
 
@@ -256,7 +258,8 @@
       .forEach(addDeleteButton);
 
     // ADD EVENTS
-    // Clicking Save Event submits the form. This handler updates the calendar on the page.
+    // When I click Save Event, the code takes what I typed in the form.
+
     eventForm.addEventListener("submit", function (event) {
       // Stop the browser from reloading the page when the form is submitted.
       event.preventDefault();
