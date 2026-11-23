@@ -28,6 +28,7 @@
         <input type="search" id="event-search" name="search">
         <button type="submit">Search</button>
         <p id="search-status" role="status"></p>
+        <ul id="search-results"></ul>
       </form>
     </section>
 
@@ -243,6 +244,7 @@
 
       button.addEventListener("click", function () {
         box.remove();
+        if (searchResults.childElementCount) searchForm.requestSubmit();
         eventStatus.textContent = name + " deleted.";
         document.getElementById("event-name").focus();
       });
@@ -415,38 +417,46 @@
         availabilityInput.focus();
       });
 
-    // SEARCH EVENTS BY NAME
-    document.getElementById("search-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
+    // Search the events currently on the calendar, including newly added ones.
+    const searchForm = document.getElementById("search-form");
+    const searchInput = document.getElementById("event-search");
+    const searchStatus = document.getElementById("search-status");
+    const searchResults = document.getElementById("search-results");
 
-        const query =
-          document.getElementById("event-search").value.trim()
-            .toLowerCase();
-        const searchStatus = document.getElementById("search-status");
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      searchResults.replaceChildren();
+      const query = searchInput.value.trim().toLowerCase();
 
-        if (!query) {
-          searchStatus.textContent = "Enter an event name.";
-          return;
-        }
+      if (!query) {
+        searchStatus.textContent = "Enter an event name.";
+        return;
+      }
 
-        const match = Array.from(
-          document.querySelectorAll(".calendar-event")
-        ).find(box =>
-          box.querySelector("mark").textContent.toLowerCase()
-            .includes(query)
-        );
+      const matches = [...document.querySelectorAll(".calendar-event")]
+        .filter(box => box.querySelector("mark").textContent.toLowerCase().includes(query));
 
-        if (!match) {
-          searchStatus.textContent = "No matching event found.";
-          return;
-        }
+      searchStatus.textContent = matches.length
+        ? matches.length + (matches.length === 1 ? " event found." : " events found.")
+        : "No matching events found.";
 
-        searchStatus.textContent =
-          "Found: " + match.querySelector("mark").textContent;
-
-        match.scrollIntoView({ behavior: "smooth", block: "center" });
+      matches.forEach(box => {
+        const day = box.closest("td").querySelector(":scope > time");
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = "#calendar";
+        link.textContent = box.querySelector("mark").textContent +
+          " · November " + day.textContent + " · " + box.querySelector("time").textContent;
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          box.tabIndex = -1;
+          box.focus({ preventScroll: true });
+          box.scrollIntoView({ block: "center", inline: "center" });
+        });
+        item.append(link);
+        searchResults.append(item);
       });
+    });
   </script>
 </body>
 </html>
